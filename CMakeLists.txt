@@ -14,6 +14,7 @@
 # NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 ###################################################################################
 cmake_minimum_required(VERSION 3.0.2)
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 project(tpc_kernels_db)
 
 set(TPC_COMPILER_PATH "/usr/bin/tpc-clang" CACHE STRING "Path to TPC C/C++ compiler")
@@ -65,4 +66,5 @@ string(TOUPPER ${SYNAPSE_PATH} SYNAPSE_PATH)
 
 add_subdirectory(src)  # build production
 add_subdirectory(tests) # unit test for kernels
+add_subdirectory(hbits) 
 
